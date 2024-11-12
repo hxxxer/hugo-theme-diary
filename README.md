@@ -3,16 +3,12 @@
 <div align="center">
 
 ![](https://img.shields.io/badge/license-MIT-blue.svg)
-![](https://img.shields.io/badge/version-1.3.0-brightgreen)
+![](https://img.shields.io/badge/version-1.3.0.1-brightgreen)
 
-[My Blog with ✨Theme Diary✨](https://risehere.net/) -
-[Intro Video](https://www.bilibili.com/video/av84273002) -
-[Progress](https://github.com/AmazingRise/hugo-theme-diary/projects/) -
+[我的博客](https://hxxxer.github.io/) -
+[原项目地址](https://github.com/AmazingRise/hugo-theme-diary/projects/) -
 [Wiki](https://github.com/amazingrise/hugo-theme-diary/wiki)
 
-隻言片語・於此匯聚
-
-Moments piled up.
 
 </div>
 
@@ -36,12 +32,11 @@ For details, please visit [project wiki](https://github.com/AmazingRise/hugo-the
 ### Features in new version
 
 <details>
-<summary>CHANGELOG</summary>
+<summary>更新日志</summary>
 
-1.3.0:
+1.3.0.1:
 
-- Removed jQuery and other redundant scripts.
-- Some improvements on performance.
+- 更改`config.toml`为`hugo.toml`以跟上新版本hugo，同时补充分页配置和修改侧栏配置信息。
 
 </details>
 
