@@ -1,4 +1,4 @@
-# <div align="center">Hugo Theme Diary</div>
+# <div align="center">Hugo Theme Musing</div>
 
 <div align="center">
 
