@@ -1,0 +1,22 @@
+{{ define "main" }}
+<section class="resume-section p-3 p-lg-5 d-flex flex-column">
+  <div class="my-auto" >
+    <form action="{{ "search" | absURL }}">
+      <label for="search-query">搜索：</label><input id="search-query" name="s"/>
+      <button type="button" class="search-button" onclick="performSearch()">点击搜索</button>
+    </form>
+    <div id="search-results">
+     <h3>搜索结果</h3>
+    </div>
+  </div>
+</section>
+<!-- this template is sucked in by search.js and appended to the search-results div above. So editing here will adjust style -->
+<script id="search-result-template" type="text/x-js-template">
+    <div id="summary-${key}">
+      <h4><a href="${link}">${title}</a></h4>
+      <p class="snippet">${snippet}</p>
+      ${ isset tags }<p>标签: ${tags}</p>${ end }
+      ${ isset categories }<p>分类: ${categories}</p>${ end }
+    </div>
+</script>
+{{ end }}

@@ -2,3 +2,45 @@
 If you want to include any custom html just before </head>, put it in /layouts/partials/extended_head.html
 Do not put anything in this file - it's only here so that hugo won't throw an error if /layouts/partials/extended_head.html doesn't exist.
 -->
+<!--    <script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.js"></script>-->
+{{ if hasPrefix .RelPermalink "/search" }}
+<script src="/js/jquery-3.3.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.js"></script>
+<script src="/js/jquery.mark-8.11.1.min.js"></script>
+<script src="/js/search.js"></script>
+<script>
+    function performSearch() {
+        const input = document.getElementById('search-query');
+        const query = input.value;
+        
+        // 获取当前页面的相对地址
+        const currentPath = window.location.pathname;
+        
+        // 获取输入框的 name 属性内容
+        const inputElement = document.getElementById('search-query');
+        const inputName = inputElement.name;
+        
+        if (query) {
+            window.location.href = '/search/?s=' + encodeURIComponent(query);
+        } else {
+            alert('请输入搜索内容');
+        }
+    }
+</script>
+<style>
+
+    .search-query {
+        padding: 10px;
+        margin-right: 10px;
+        width: 300px; /* 可以根据需要调整宽度 */
+    }
+    .search-button {
+<!--        padding: 10px 20px;-->
+        cursor: pointer;
+        border: 1px black;
+    }
+    .snippet{
+        -webkit-mask-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 70%); 
+
+</style>
+{{ end }}
