@@ -3,7 +3,7 @@
 <div align="center">
 
 ![](https://img.shields.io/badge/license-MIT-blue.svg)
-![](https://img.shields.io/badge/version-1.3.0.1-brightgreen)
+![](https://img.shields.io/badge/version-1.3.1-brightgreen)
 
 [我的博客](https://hxxxer.github.io/) -
 [原项目地址](https://github.com/AmazingRise/hugo-theme-diary/projects/) -
@@ -34,9 +34,24 @@ For details, please visit [project wiki](https://github.com/AmazingRise/hugo-the
 <details>
 <summary>更新日志</summary>
 
+1.3.1
+
+- 添加搜索功能，参考来源是GitHub Gist的[一篇文章](https://gist.github.com/eddiewebb/735feb48f50f0ddd65ae5606a1cb41ae)。
+
 1.3.0.1:
 
 - 更改`config.toml`为`hugo.toml`以跟上新版本hugo，同时补充分页配置和修改侧栏配置信息。
+
+</details>
+
+<details>
+<summary>更新详细</summary>
+
+- 使用了hugo自带的功能导出`index.json`, 然后使用fuse模糊搜索，然后内容展示在`/search`，所以需要在文章路径添加`search.md`，以及`layouts/_default/search.html`。
+
+- 实现搜索功能的js是`static/js/search.js`，还有一些位于`layouts/_default/extended_head.html`的js、css。
+
+- `hugo.toml`也要修改成输出内容到`index.json`，这个文件可以在`/index.json`查看。
 
 </details>
 

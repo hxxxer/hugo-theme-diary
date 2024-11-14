@@ -12,7 +12,11 @@
             </div>
 
             {{- partial "sidebar.html" . -}}
+            
+            {{ if hasPrefix .RelPermalink "/search/" }}
+            {{ else }}
             {{- partial "extrabar.html" . -}}
+            {{ end }}
 
             {{- partial "mobile-footer.html" . -}}
             <!-- mobile footer -->
@@ -27,6 +31,5 @@
         {{- /* with leading slash */ -}}
         <script src="{{"/js/journal.js" | relURL}}"></script>
     {{- end -}}
-    
     </body>
 </html>
